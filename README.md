@@ -6,7 +6,7 @@ Private docker registry allows you to share your custom base images within your 
 
 Pull registry image from docker hub by using command:
 ```sh
-docker pull registry
+docker pull registry:2
 ```
 Create directory name:
 ```sh
