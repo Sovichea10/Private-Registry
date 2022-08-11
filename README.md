@@ -2,7 +2,10 @@
 Private docker registry allows you to share your custom base images within your organization, keeping a consistent, private, and centralized source of truth for the building blocks of your architecture.
 
 # Full setup registry
+sh ``
 1. Pull 'registry' image from docker hub
+``
+
 2. Go to https://www.digitalocean.com/community/tutorials/how-to-set-up-a-private-docker-registry-on-ubuntu-20-04 
 
 # Usage command
