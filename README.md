@@ -78,7 +78,7 @@ docker push "ip server registry"/[IMAGE]:[TAG]
 ```
 ## Pull image from private registry
 ### Daemon.json
-We need to create json file called daemon.json because from any server access to private registry, it's detected by permission. so it looks like this:
+We need to create json file called daemon.json under /etc/docker because from any server access to private registry, it's detected by permission. so it looks like this:
 ```sh
 {
   "insecure-registries": [
