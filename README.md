@@ -96,6 +96,6 @@ docker login "ip server registry"
 ```
 ### Pull image
 ```sh
-docker pull "ip server registry"/[IMAGE]:[NAME]
+docker pull "ip server registry"/[IMAGE]:[TAG]
 ```
     
