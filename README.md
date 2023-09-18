@@ -99,8 +99,17 @@ docker login "ip server registry"
 docker pull "ip server registry"/[IMAGE]:[TAG]
 ```
 ## Docker Registry API Request (CURL)
-### login
+### Login
 ```sh
 curl --user ${user}:${password} <registry_url>/v2
 ```
+### List Repo
+```sh
+curl --user ${user}:${password} <registry_url>/v2/_catalog
+```
+### Get Tag
+```sh
+curl --user ${user}:${password} <registry_url>/v2/<repo>/tag/list
+```
+
     
