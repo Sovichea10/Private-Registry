@@ -107,9 +107,13 @@ curl --user ${user}:${password} <registry_url>/v2
 ```sh
 curl --user ${user}:${password} <registry_url>/v2/_catalog
 ```
-### Get Tag
+### Get tags
 ```sh
 curl --user ${user}:${password} <registry_url>/v2/<repo>/tag/list
+```
+### Get image details
+```sh
+curl --user ${user}:${password} <registry_url>/v2/<repo>/manifest/<tag>
 ```
 
     
