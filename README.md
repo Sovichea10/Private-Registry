@@ -113,15 +113,15 @@ curl --user ${user}:${password} <registry_url>/v2/<repo>/tags/list
 ```
 ### Get image details
 ```sh
-curl --user ${user}:${password} <registry_url>/v2/<repo>/manifest/<tag>
+curl --user ${user}:${password} <registry_url>/v2/<repo>/manifests/<tag>
 ```
 ### Get digest
 ```sh
-curl -v --silent -H "Accept: application/vnd.docker.distribution.manifest.v2+json -X GET "<registry_url>/v2/<repo>/manifest/<tag> 2>&1 | grep Docker-Content-Digest | awk '{print ($3)}"
+curl -v --silent -H "Accept: application/vnd.docker.distribution.manifest.v2+json -X GET "<registry_url>/v2/<repo>/manifests/<tag> 2>&1 | grep Docker-Content-Digest | awk '{print ($3)}"
 ```
 ### Delete Image
 ```sh
-curl -v --silent -H "Accept: application/vnd.docker.distribution.manifest.v2+json -X DELETE "<registry_url>/v2/<repo>/manifest/<tag>/<digest> "
+curl -v --silent -H "Accept: application/vnd.docker.distribution.manifest.v2+json -X DELETE "<registry_url>/v2/<repo>/manifests/<tag>/<digest> "
 ```
 
     
