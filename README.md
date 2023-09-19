@@ -117,9 +117,9 @@ curl --user ${user}:${password} <registry_url>/v2/<repo>/manifests/<tag>
 ```
 ### Get digest
 ```sh
-curl -v --silent --user ${user}:${password} -H 'Accept: application/vnd.docker.distribution.manifest.v2+json'<registry_url>/v2/<repo>/manifests/<tags> | grep -i Docker-Content-Digest | awk '{print $2}'
+curl -v --silent -H 'Authorization: ${Basic_Auth}' -H 'Accept: application/vnd.docker.distribution.manifest.v2+json'<registry_url>/v2/<repo>/manifests/<tags> | grep -i Docker-Content-Digest | awk '{print $2}'
 ```
 ### Delete Image
 ```sh
-curl -v --silent --user ${user}:${password} -X DELETE <registry_url>/v2/<repo>/manifests/<digest>
+curl -v --silent -H 'Authorization: ${Basic_Auth}' -X DELETE <registry_url>/v2/<repo>/manifests/<digest>
 ```
