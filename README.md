@@ -77,7 +77,7 @@ docker tag "name" "ip server registry"/[IMAGE]:[TAG]
 docker push "ip server registry"/[IMAGE]:[TAG]
 ```
 ## Pull image from private registry
-### Daemon.json
+### Config Insecure Registries - Docker Runtime (Daemon.json)
 We need to create json file called daemon.json under /etc/docker because from any server access to private registry, it's detected by permission. so it looks like this:
 ```sh
 {
@@ -90,6 +90,13 @@ We need to create json file called daemon.json under /etc/docker because from an
 }
 ```
 Note: For Windows, open docker -> go settings -> you'll see Docker Engine and then configure by passing daemon.json script above to it.
+### Config Insecure Registries - CRI-O Runtime in Kubernetes
+Please config like this under /etc/containers/registries.conf:
+```sh
+[[registry]]
+insecure = true
+location = "[registry_url]"
+```
 ### Login
 ```sh
 docker login "ip server registry"
