@@ -41,7 +41,7 @@ nano docker-compose.yml
 ```
 docker-compose.yml looks like this:
 ```sh
-version: '3'
+version: '3.8'
 
 services:
   registry:
