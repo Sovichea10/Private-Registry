@@ -130,3 +130,10 @@ curl -v --silent -H 'Authorization: ${Basic_Auth}' -H 'Accept: application/vnd.d
 ```sh
 curl -v --silent -H 'Authorization: ${Basic_Auth}' -X DELETE <registry_url>/v2/<repo>/manifests/<digest>
 ```
+
+## Configure Container.Sock to list Images
+```sh
+  sudo crictl config runtime-endpoint /run/containerd/containerd.sock
+  sudo systemctl restart containerd.service
+  sudo crictl images
+```
